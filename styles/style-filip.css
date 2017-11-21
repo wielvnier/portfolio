@@ -1,0 +1,371 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Lato";
+	background-color: #57058B;
+	font-size: 20px;
+}
+
+
+.container {
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.row::before,
+.row::after {
+	content: "";
+	display: table ;
+	clear: both;
+ }
+
+/* ---------------------- HEADER I NAV -------------------------------------------- */
+
+
+.header {
+	background: #051938;
+	line-height: 70px;
+}
+
+.header nav ul	{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	float: right;
+	line-height: 0;
+	font-size: 0;
+}
+
+.header nav ul li {
+	display: inline-block;
+	font-size: 15px;
+}
+
+.header nav ul li a {
+	color: #fff;
+	line-height: 70px;
+	padding: 0 20px;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 1s;
+}
+
+.header nav ul li a:hover {
+	background: #313234;
+}
+
+.header nav img {
+    height: 50px;
+    float: left;
+    margin: 10px 0 10px 100px;
+}
+
+.sticky {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+}
+
+
+/* ---------------------- HAMBURGER -------------------------------------------- */
+
+.button{
+	float: right;
+	margin: 60px;
+}
+
+
+.hamburger {
+	width:80px;
+	height: 70px;
+	border: 0;
+	border-top: 10px solid #4A9470;
+	background: transparent;
+	position: relative;
+	transition: 0.3s transform linear;
+}
+
+.hamburger::before, .hamburger::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	border-top: 10px solid #4A9470;
+	transform: translateY(20px);
+}
+
+
+.hamburger::after {
+	transform: translateY(50px);
+	transition: 0.3s transform linear;
+
+}
+
+
+.hamburger:focus {
+	transform: rotate(45deg) translateY(10px);
+	border: none;
+}
+
+.hamburger:focus::after {
+	transform: rotate(-90deg) translateX(-20px);
+}
+
+
+/* ---------------------- LOGO -------------------------------------------- */
+
+/* .logo {
+	position: relative;
+	margin: 60px;
+}
+
+.logo-a {
+  background: silver;
+  height: 25px;
+  width: 25px;
+  padding: 0;
+  border-top: 5px solid #4A9470;
+  border-left: 5px solid #4A9470;
+  border-right: 5px solid #4A9470;
+  border-bottom: 5px solid #4A9470;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+}
+
+.logo-b {
+  background: silver;
+  height: 20px;
+  width: 5px;
+  padding: 0;
+  border-top: 5px solid #4A9470;
+  border-left: 5px solid #4A9470;
+  border-right: 5px solid #4A9470;
+  margin: 5px auto 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+*/
+
+.img {
+	position: relative;
+	overflow: hidden;
+	height: 80px;
+	width: 80px;
+	margin: 60px;
+}
+
+.img img {
+	max-width: 100%;
+	border-radius: 50%;
+}
+
+.img .layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: .8s;
+	text-align: center;
+	border-radius: 50%;
+}
+
+.img .layer .fa {
+	position: relative;
+  	top: 50%;
+	color: #fff;
+ 	transition: .8s;
+ 	transform: translateY(-50%);
+ 	cursor: pointer;
+ 	font-size: 35px;
+}
+
+.img .layer .fa {
+  opacity: 0;
+  transition: .8s;
+  margin-right: 20px;
+}
+
+.img .layer .fa:last-child {
+  margin-right: 0;
+}
+
+.img:hover .layer i {
+  opacity: 1;
+}
+
+.img:hover .layer {
+  background: rgba(0, 0, 0, .7);
+}
+
+
+
+
+
+/* ---------------------- WELCOME -------------------------------------------- */
+
+
+#welcome {
+	padding-top: 100px;
+}
+
+#welcome p {
+	font-size: 30px;
+	color: #fff;
+	text-align: justify;
+	float: left;
+	margin-right: 2px;
+	margin-top: 0;
+	margin-bottom: 0;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-image: -moz-linear-gradient(top, #fff 0%, #4A9470 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#4A9470));
+	background-image: -webkit-linear-gradient(top, #fff 0%,#4A9470 100%);
+	background-image: -o-linear-gradient(top, #fff 0%,#4A9470 100%);
+	background-image: -ms-linear-gradient(top, #fff 0%,#4A9470 100%);
+	background-image: linear-gradient(to bottom, #fff 0%,#4A9470 100%);
+	}
+/*
+#welcome img {
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	margin-right: 10px;
+	margin-left: 10px;
+	transition: 0.3s;
+}
+
+#welcome img:hover {
+	background-image: url("images/linkedin_circle_color.png");
+	z-index: 99;
+}
+*/
+
+
+
+
+
+
+.col {
+	float:left;
+}
+
+[class*="col-"] {
+	float: left;
+	Min-height: 1px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.col-offset-0 {margin-left: 0;}
+.col-offset-1 {margin-left: 8.33%;}
+.col-offset-2 {margin-left: 16.66%;}
+.col-offset-3 {margin-left: 25%;}
+.col-offset-4 {margin-left: 33.33%;}
+.col-offset-5 {margin-left: 41.66%;}
+.col-offset-6 {margin-left: 50%;}
+.col-offset-7 {margin-left: 58.33%;}
+.col-offset-8 {margin-left: 66.66%;}
+.col-offset-9 {margin-left: 75%;}
+.col-offset-10 {margin-left: 83.33%;}
+.col-offset-11 {margin-left: 91.66%;}
+
+
+
+@media (max-width: 768px) {
+
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+
+    #header nav {
+
+	}
+
+	#header nav img {
+    	float: none;
+	}
+
+	#header nav ul	{
+		float: none;
+	}
+
+	#header nav ul li {
+		display: block;
+		text-align: center;
+	}
+
+	.hamburger {
+	width:40px;
+	height: 35px;
+	border: 0;
+	border-top: 5px solid #4A9470;
+	background: transparent;
+	position: relative;
+	transition: 0.3s transform linear;
+	}
+
+	.hamburger::before, .hamburger::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		border-top: 5px solid #4A9470;
+		transform: translateY(10px);
+	}
+
+
+	.hamburger::after {
+		transform: translateY(25px);
+		transition: 0.3s transform linear;
+
+	}
+
+
+	.hamburger:focus {
+		transform: rotate(45deg) translateY(5px);
+		border: none;
+	}
+
+	.hamburger:focus::after {
+		transform: rotate(-90deg) translateX(-10px);
+	}
+
+
+
+}
+

@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Wizytówka</title>
+	<link rel="stylesheet" type="text/css" href="styles/style-filip.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext" rel="stylesheet">
+	<link rel="icon" href="favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<script src="https://use.fontawesome.com/550f71ec04.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109852955-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-109852955-1');
+	</script>
+</head>
+<body>
+	<section class="header nav" class="row">
+		<div class="container">
+			<nav class="row">
+				<img src="xxx" title="Logo" alt="Logo">
+				<ul>
+					<li><a href="#">Strona główna</a></li>
+					<li><a href="#">O firmie</a></li>
+					<li><a href="#">Kontakt</a></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+	<div class="button">
+		<button class="hamburger"></button>
+	</div>
+	<div class="img">
+				<div class="layer">
+					<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+				</div>
+				<img src="images/profil.jpg"> 
+	</div>
+	<div id="welcome" class="container">
+		<p>Hello! My name is Filip and I am skilled in HTML, CSS and JavaScript. Programming is my biggest passion, sa I have no problems with motivation to continuous learning everyday. Now, I am looking for a job as a Junior Frontend Developer in Warsaw.</p>
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<script src="scripts/jquery-3.2.1.min.js"></script>
+	<script>
+		$(document).ready(function() {
+		var NavY = $('.nav').offset().top;
+		 
+		var stickyNav = function(){
+		var ScrollY = $(window).scrollTop();
+			  
+		if (ScrollY > NavY) { 
+			$('.nav').addClass('sticky');
+		} else {
+			$('.nav').removeClass('sticky'); 
+		}
+		};
+		 
+		stickyNav();
+		 
+		$(window).scroll(function() {
+			stickyNav();
+		});
+		});	
+	</script>
+</body>
+</html>
